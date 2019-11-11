@@ -1,0 +1,48 @@
+<%#= flash[:notice] %>
+<table>
+  <thead>
+    <tr>
+<!--       <th>Numéro de billet</th>
+      <th>Numéro de réservation</th>
+      <th>Date representation</th>
+      <th>Heure representation</th>
+      <th>Cle spectacle</th>
+      <th>Spectacle</th>
+      <th>Cle representation</th>
+      <th>Representation</th>
+      <th>Date representation</th>
+      <th>Heure representation</th>
+      <th>Date fin representation</th>
+      <th>Heure fin representation</th>
+      <th>Prix</th>
+      <th>Type de produit</th>
+      <th>Filiere de vente</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Email</th>
+      <th>Adresse</th>
+      <th>Code postal</th>
+      <th>Pays</th>
+      <th>Age</th>
+      <th>Sexe</th> -->
+
+    </tr>
+  </thead>
+<tbody>
+    <% @bookings.each do |booking| %>
+    <tr>
+      <td>booking.num_billet</td>
+      <td>booking.num_resa</td>
+    </tr>
+    <% end %>
+</tbody>
+</table>
+
+<div>
+  <h1>Import CSV</h1>
+  <%= form_tag import_bookings_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import CSV" %>
+  <% end %>
+</div>
+
