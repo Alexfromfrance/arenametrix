@@ -12,9 +12,9 @@ class BookingsController < ApplicationController
   def admindata
     memory = []
     hash = {}
-    @hash = hash
     Booking.all.each { |booking| hash[booking.representation].nil? ? hash[booking.representation] = [booking.prix] : hash[booking.representation] << booking.prix }
     @representations = hash.map { |k, v| [k, v.sum.fdiv(v.length)] }
+
     @bookings = []
     Booking.where.not(age: nil).each do |booking|
       unless memory.include?(booking.nom)
