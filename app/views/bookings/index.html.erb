@@ -2,7 +2,7 @@
 <table>
   <thead>
     <tr>
-<!--       <th>Numéro de billet</th>
+      <th>Numéro de billet</th>
       <th>Numéro de réservation</th>
       <th>Date representation</th>
       <th>Heure representation</th>
@@ -24,15 +24,36 @@
       <th>Code postal</th>
       <th>Pays</th>
       <th>Age</th>
-      <th>Sexe</th> -->
+      <th>Sexe</th>
 
     </tr>
   </thead>
 <tbody>
     <% @bookings.each do |booking| %>
     <tr>
-      <td>booking.num_billet</td>
-      <td>booking.num_resa</td>
+      <td><%=booking.num_billet %></td>
+      <td><%=booking.num_resa %></td>
+      <td><%=booking.date_resa %></td>
+      <td><%=booking.heure_resa %></td>
+      <td><%=booking.cle %></td>
+      <td><%=booking.nom_spectacle %></td>
+      <td><%=booking.cle_representation %></td>
+      <td><%=booking.representation %></td>
+      <td><%=booking.date_representation %></td>
+      <td><%=booking.heure_representation %></td>
+      <td><%=booking.date_fin_representation %></td>
+      <td><%=booking.heure_fin_representation %></td>
+      <td><%=booking.prix %></td>
+      <td><%=booking.type_produit %></td>
+      <td><%=booking.filiere %></td>
+      <td><%=booking.nom %></td>
+      <td><%=booking.prenom %></td>
+      <td><%=booking.email %></td>
+      <td><%=booking.adresse %></td>
+      <td><%=booking.postal %></td>
+      <td><%=booking.pays %></td>
+      <td><%=booking.age %></td>
+      <td><%=booking.sexe %></td>
     </tr>
     <% end %>
 </tbody>

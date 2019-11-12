@@ -44,32 +44,4 @@ ActiveRecord::Schema.define(version: 2019_11_11_114753) do
     t.integer "booking"
   end
 
-  create_table "reservations", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "Numero billet"
-    t.integer "Reservation"
-    t.string "Date reservation"
-    t.string "Heure reservation"
-    t.string "Cle spectacle"
-    t.string "Spectacle"
-    t.integer "Cle representation"
-    t.string "Representation"
-    t.string "Date representation"
-    t.string "Heure representation"
-    t.string "Date fin representation"
-    t.string "Heure fin representation"
-    t.integer "Prix"
-    t.string "Type de produit"
-    t.string "Filiere de vente"
-    t.string "Nom"
-    t.string "Prenom"
-    t.string "Email"
-    t.string "Adresse"
-    t.string "Code postal"
-    t.string "Pays"
-    t.integer "Age"
-    t.string "Sexe"
-  end
-
 end
