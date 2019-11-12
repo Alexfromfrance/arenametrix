@@ -1,0 +1,23 @@
+<h2>Admin</h2>
+
+<h2>Nombre de réservations</h2>
+<%= Booking.count %>
+
+<h2>Nombre d'acheteurs uniques</h2>
+<%= Booking.select(:nom).distinct.count %>
+
+<h2>Age moyen des acheteurs</h2>
+<%= @bookings.map {|i| i.age}.sum.fdiv(@bookings.count).round %>
+
+<h2>Prix moyen par représentations arrondi à 2 décimales</h2>
+<ul>
+<% @representations.sort_by {|i| i.first}.each do |prez| %>
+  <li><%= prez.first %> ==> <%= prez.last.round(2) %></li>
+  <% end %>
+</ul>
+
+
+
+<div class="goback">
+      <%= link_to "<< Retourner au CSV",  bookings_path %>
+</div>
